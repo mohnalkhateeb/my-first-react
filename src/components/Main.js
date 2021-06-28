@@ -10,10 +10,10 @@ class Main extends React.Component {
             <div className='main'>
 
                 {
-                Horend.map(item => {
-                    return (<HornedBeasts title={item.title } source= {item.image_url} detail={item.description} />
+                    Horend.map((item,key) => {
+                        return (<HornedBeasts title={item.title} source={item.image_url} detail={item.description} key={key}/>
                         )
-                })
+                    })
                 }
             </div>
         )
