@@ -1,6 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
+import SelectedBeast from './SelectedBeast';
 
 // import reactDom from 'react-dom';
 
@@ -9,7 +10,8 @@ class HornedBeasts extends React.Component
     constructor(props) {
         super(props);
         this.state = {
-            favorited: 0
+            favorited: 0,
+            //  showmodel: false
         }
     }
 
@@ -20,6 +22,11 @@ class HornedBeasts extends React.Component
      
         
     }
+    showModelBeast = (key)=>{
+        
+         this.setState({showmodel:true})
+        // this.props.showModelBe(this.props.key)
+    }
     render() {
         return(
             // <div className="hornedBeasts">
@@ -28,8 +35,8 @@ class HornedBeasts extends React.Component
             //     <p> {this.props.detail}</p>
             //     <p> 💚{this.state.favorited}</p>
             // </div>
-
-            <Card style={{ width: '250px' } } >
+            <>
+            <Card style={{ width: '250px' } } onClick={this.showModelBeast}>
                     <Card.Img onClick={this.favoritedplus} variant="top" src={this.props.source} />
                     <Card.Body>
                         <Card.Title>{this.props.Title}</Card.Title>
@@ -41,6 +48,8 @@ class HornedBeasts extends React.Component
                         </Card.Text>
                     </Card.Body>
                 </Card>
+                <SelectedBeast title={this.title} source={this.image_url} detail={this.description}/>
+                </>
         )
     }
 
