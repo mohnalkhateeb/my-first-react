@@ -14,11 +14,7 @@ class App extends React.Component {
       SelectedBe: {}
     }
   }
-  // showModal = (name) => {
-
-  //   const selectedBeast = Horend.find(beast => beast.title === name);
-  //   this.setState({selectedBeast, displayModal:true});
-  // }
+ 
   showModelBe = (key)=> {
     let objBeast= Horend.find(item => item.title === key)
         //  <SelectedBeast  title={item.title} source={item.image_url} detail={item.description} key={key}/>
