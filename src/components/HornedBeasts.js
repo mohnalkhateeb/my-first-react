@@ -23,8 +23,9 @@ class HornedBeasts extends React.Component
         
     }
     showModelBeast = (key)=>{
-        
-         this.props.showModelBe(this.props.Title)
+        key.preventDefault()
+        key= this.props.Title
+         this.props.showModelBeast(key)
     }
     render() {
         return(
