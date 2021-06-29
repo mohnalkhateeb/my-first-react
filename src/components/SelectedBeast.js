@@ -8,13 +8,10 @@ import  Card  from 'react-bootstrap/Card';
 class SelectedBeast extends React.Component {
     render(){
     
-        // [x] R E F A C T O R > C O D E
+        
         let displayModal = this.props.displayModal;
         let hideModal = this.props.hideModal;
-        // let image = this.props.SelectedBe.image_url;
-        // let title = this.props.SelectedBe.title;
-        // let description = this.props.SelectedBe.description;
-        // let keyword = this.props.SelectedBe.keyword;
+        
     
         return (
           <Modal show={displayModal} onHide={this.props.hideModal}>
