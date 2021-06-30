@@ -7,14 +7,11 @@ import  Card  from 'react-bootstrap/Card';
 
 class SelectedBeast extends React.Component {
     render(){
-    
-        
-        let displayModal = this.props.displayModal;
-        let hideModal = this.props.hideModal;
+  
         
     
         return (
-          <Modal show={displayModal} onHide={this.props.hideModal}>
+          <Modal show={this.props.displayModal} onHide={this.props.hideModal}>
           <Modal.Dialog>
             <Modal.Header>
               <h2>Lil Horned Beasties</h2>
@@ -23,9 +20,9 @@ class SelectedBeast extends React.Component {
             <Card style={{ width: '26rem'}}>
             <Card.Img src={this.props.source} />
                 <Card.Body>
-                  <Card.Title>{this.props.Title}</Card.Title>
+                  <Card.Title>{this.props.title}</Card.Title>
                   <Card.Text>{this.props.detail}</Card.Text>
-                  <Button onClick = {hideModal} variant="primary" size="lg" block>C L O S E</Button>
+                  <Button onClick = {this.props.hideModal} variant="primary" size="lg" block>C L O S E</Button>
                 </Card.Body>
             </Card>
           </Modal.Body>

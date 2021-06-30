@@ -23,9 +23,10 @@ class HornedBeasts extends React.Component
         
     }
     showModelBeast = (key)=>{
-        key.preventDefault()
-        key= this.props.Title
-         this.props.showModelBeast(key)
+        // key.preventDefault()
+        // key= this.props.Title
+        console.log(this.props.title)
+         this.props.showModelBeast(this.props.title)
     }
     render() {
         return(
@@ -39,7 +40,7 @@ class HornedBeasts extends React.Component
             <Card style={{ width: '250px' } } onClick={this.showModelBeast}>
                     <Card.Img onClick={this.favoritedplus} variant="top" src={this.props.source} />
                     <Card.Body>
-                        <Card.Title>{this.props.Title}</Card.Title>
+                        <Card.Title>{this.props.title}</Card.Title>
                         <Card.Text>
                         {this.props.detail}
                         </Card.Text>
@@ -48,7 +49,7 @@ class HornedBeasts extends React.Component
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <SelectedBeast title={this.title} source={this.image_url} detail={this.description}/>
+                {/* <SelectedBeast title={this.title} source={this.image_url} detail={this.description}/> */}
                 </>
         )
     }
