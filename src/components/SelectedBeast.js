@@ -14,7 +14,7 @@ class SelectedBeast extends React.Component {
           <Modal show={this.props.displayModal} onHide={this.props.hideModal}>
           <Modal.Dialog>
             <Modal.Header>
-              <h2>Lil Horned Beasties</h2>
+              <h2>{this.props.title}</h2>
             </Modal.Header>
             <Modal.Body>
             <Card style={{ width: '26rem'}}>
