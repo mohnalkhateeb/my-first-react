@@ -1,7 +1,7 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
-import SelectedBeast from './SelectedBeast';
+// import SelectedBeast from './SelectedBeast';
 
 // import reactDom from 'react-dom';
 
