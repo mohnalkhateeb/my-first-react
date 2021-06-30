@@ -10,23 +10,17 @@ class Main extends React.Component {
         super(props);
         this.state = {
             displayModal: false,
-            SelectedBe: [{
-                image_url: "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
-                title: "UniWhal",
-                description: "A unicorn and a narwhal nuzzling their horns",
-                keyword: "narwhal",
-                horns: 1
-            }]
+            SelectedBe: {} 
         }
     }
     hideModal = () => { this.setState({ displayModal: false }); }
 
     showModelBeast = (key) => {
-        key.preventDefault()
-        let objBeast = Horend.find(item => item.title === key)
-
-        this.setState({ SelectedBe: objBeast }, { displayModal: true })
-
+        // key.preventDefault()
+        let SelectedB = Horend.find(item => item.title === key)
+        console.log(key)
+        this.setState({ SelectedBe : SelectedB , displayModal: true })
+        console.log(this.state.SelectedBe.title)
     }
 
     render() {
@@ -45,8 +39,8 @@ class Main extends React.Component {
                     title={this.state.SelectedBe.title}
                     source={this.state.SelectedBe.image_url}
                     detail={this.state.SelectedBe.description}
-                />}
-
+                />
+                }
 
             </div>
         )
